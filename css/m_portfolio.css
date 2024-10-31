@@ -1,0 +1,403 @@
+@charset "uft-8";
+
+body {
+    overflow-y:hidden;
+}
+
+/* header */
+header{
+    width: 100%;
+    position: relative;
+}
+header nav {
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    width: 300px; 
+    height: 400px;
+    background: rgba(0, 0, 0, 1);
+    z-index: 200; 
+    transition: right 0.3s ease; 
+    padding: 20px;
+}
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 200; 
+    transition: right 0.3s ease; 
+}
+header nav ul li a{
+    padding: 10px 20px; 
+    color: #fff;
+    font-size: 25px;
+}
+header .menu {
+    position: absolute;
+    right: 20px; 
+    top: 15px; 
+    width: 40px;
+    height: 40px; 
+    background: url(../img/icon-menu.png) no-repeat center / contain; 
+    z-index: 300; 
+    border: none; 
+    cursor: pointer; 
+}
+.dim {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+}
+header nav.show {
+    display: block;
+    right: 0; 
+}
+.dim.show {
+    display: block;
+}
+.close-menu {
+    display: none;
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    background: url(../img/close.png) no-repeat center/cover;
+    width: 45px; 
+    height: 45px; 
+    border: none; 
+    cursor: pointer; 
+    z-index: 300;
+}
+/* //header */
+
+/* section-home */
+main #home{
+    height: 60vh;
+}
+main #home .mouse{
+    top: 80%;
+}
+#home .movie {
+    height: 60vh;
+}
+#home .slogan {
+    font-size: 30px;
+    margin: 0 20px;
+}
+#home .intro {
+    bottom: 50%;
+    font-size: 28px;
+    line-height: 40px;
+}
+#home .intro p:last-child{
+    font-size: 35px;
+    margin:20px 60px;
+}
+/* //section-home */
+
+
+/* section-about */
+.container {
+    margin: 50px auto;
+}
+main #about {
+    width: 90vw;
+    height: auto; 
+    padding: 20px 10px; 
+}
+main #about .myprofile {
+    flex-direction: column; 
+    align-items: center;
+    margin: 50px 0; 
+}
+main #about .profile_photo {
+    width: 200px; 
+    height: 200px;
+}
+main #about .name li> strong{
+    font-size: 28px;
+}
+main #about .name li p{
+   font-size: 18px;
+}
+main #about .profile_contents {
+    flex-direction: column; 
+    align-items: center;
+    padding: 30px 0;
+}
+main #about .profile_contents > ul > li {
+    margin-bottom: 10px; 
+}
+main #about .name li:first-child {
+    margin-bottom: 20px; 
+}
+main #about .education{
+    margin: 70px auto;
+}
+main #about .skill_list{
+    margin: 100px 0;
+}
+main #about .skill_list .card_contents p{
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 10px;
+}
+main #about .skill_list .card_contents strong{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/* //section-about */
+
+
+/* section-portfolio_D */
+#portfolio_D h2::before{
+    width: 350px;
+}
+#portfolio_D h2::after{
+    width: 350px;
+}
+#portfolio_D .moblie_text{
+    display: block;
+}
+.portfolio_design {
+    display: none;
+}
+.design_contList {
+    width: 90%;
+}
+.design_thumbnails {
+    display: grid;
+    gap: 10rem;
+}
+.design_thumbnails li {
+    overflow: visible; 
+    width: 300px; 
+    max-width: 400px; 
+    height: auto; 
+    transition: z-index 0.3s;
+}
+.design_thumbnails img {
+    height: auto; 
+    object-fit: cover; 
+    transition: transform 0.5s ease-in-out; 
+}
+.design_thumbnails li:hover img {
+    transform: scale(1.7); 
+}
+/* //section-portfolio_D */
+
+/* section-portfolio_area */
+#portfolio_area h2::before{
+    width: 330px;
+}
+#portfolio_area h2::after{
+    width: 330px;
+}
+#portfolio_area h2{
+    font-size: 25px;
+    padding: 30px;
+}
+.infor_area{
+    line-height: 30px;
+}
+.infor_area p:first-child{
+    font-size: 20px;
+}
+.infor_area .text_area {
+    font-size: 15px;
+}
+.infor_area, .img_area {
+    width: 90%;
+    margin: 0;
+}
+.swiper-slide {
+    margin-left: 5px;
+}
+/* //section-portfolio_area */
+
+/* Planning */
+#Planning {
+    margin: 50px;
+}
+#Planning > h2{
+font-size: 25px;
+padding: 30px;
+}
+#Planning > h2::before{
+    width: 330px;
+}
+#Planning > h2::after{
+    width: 330px;
+}
+#Planning .wrap {
+    margin: 100px 0; 
+}
+.plan_text strong{
+    font-size: 20px;
+}
+.plan_text .text_area {
+    font-size: 15px;
+}
+/* //Planning */
+
+
+@media screen and (max-width: 440px)
+{
+    body {
+        overflow-y:hidden;
+    }
+    /* header */
+    header nav {
+        width: 230px; 
+    }
+    header nav ul li a{
+        padding: 10px 20px; 
+        color: #fff;
+        font-size: 20px;
+    }
+    header .menu {
+        width: 30px;
+        height: 30px; 
+    }
+    .close-menu {
+        width: 30px; 
+        height: 30px; 
+    }
+    /* //header */
+    
+    /* section-home */
+    main #home{
+        height: 80vh;
+    }
+    main #home .mouse{
+        top: 55%;
+    }
+    #home .movie {
+        height: 60vh;
+    }
+    #home > h2 strong {
+        font-size: 23px;
+    }
+    #home .intro {
+        font-size: 20px;
+    }
+    #home .intro p:last-child{
+        font-size: 25px;
+    }
+    #home .slogan {
+        font-size: 30px;
+        margin: 0 20px;
+        bottom: 45%;
+    }
+    #home .slogan strong {
+        line-height: 1.5;
+        font-size: 20px;
+    }
+    /* //section-home */
+    
+    /* section-about */
+    .container {
+        margin: 0 auto;
+    }
+    main #about {
+        margin: -100px auto;
+    }
+    main #about .name li> strong{
+         font-size: 25px;
+    }
+    main #about .name li:first-child{
+         margin-bottom: 30px;
+    }
+    main #about .name li p{
+        font-size: 15px;
+    }
+    main #about .skill_list{
+        margin: 100px 0;
+    }
+    main #about .education p{
+        font-size: 18px;
+        margin: 0 20px;
+        text-align: center;
+        line-height: 1.5;
+    }
+    main #about .skill_list .card_contents {
+        flex-wrap: wrap; 
+    }
+    main #about .skill_list .card_contents > * {
+        flex: 0 0 calc(50% - 20px);
+        margin: 10px;
+        box-sizing: border-box; 
+    }
+    /* //section-about */
+    
+    /* section-portfolio_D */
+    #portfolio_D {
+        margin: 150px 0;
+    }
+    #portfolio_D h2::after{
+        width: 100px;
+    }
+    #portfolio_D h2::before{
+        width: 100px;
+    }
+    .design_thumbnails {
+        display: block;
+    }
+    .design_thumbnails li{
+        margin: 10px auto; 
+    }
+    /* //section-portfolio_D */
+
+    /* section-portfolio_area */
+    #portfolio_area h2::before{
+        width: 80px;
+        right: 100%;
+    }
+    #portfolio_area h2::after{
+        width: 80px;
+        left: 100%;
+    }
+    #portfolio_area{
+        margin: -100px auto;
+    }
+    .swiper_publishing {
+        margin-bottom: 50px;
+    }
+    .swiper-slide {
+        display: block;
+        width: 100%;
+        margin-left: 5px;
+    }
+    /* //section-portfolio_area */
+
+    /* section-Planning */
+    #Planning {
+        margin: 100px 0;
+    }
+    .Planning_01,.Planning_02,.Planning_03,.Planning_04 {
+        display: block;
+        margin: 20px;
+    }
+    .plan_text {
+        padding:20px 0;
+    }
+    #Planning > h2{
+        margin-bottom: 0;
+    }
+    #Planning > h2::before{
+        width: 80px;
+        right: 100%;
+    }
+    #Planning > h2::after{
+        width: 80px;
+        left: 100%;
+    }
+    #Planning .wrap{
+        margin: 0;
+    }
+}
