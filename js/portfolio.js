@@ -51,22 +51,30 @@
         }, 1000); 
     }, 3000);
 
+
     /* mouse-icon 상하 움직이기 */
-    const mouseIcon = document.querySelector('#home > .mouse i');
-    let position = 0;
-    const step = 0.3; 
+    const movieElement = document.querySelector('#home .movie');
+    let position = 5;
+    const step = 0.05; 
     let direction = 1; 
 
     // 마우스 아이콘 애니메이션
     function animate() {
         position += step * direction;
-        if (position >= 20 || position <= 0) {
+        
+        // 경계 설정
+        if (position >= 10 || position <= 5) { 
             direction *= -1; 
         }
-        mouseIcon.style.transform = `translateY(${position}px)`;
+
+        // ::after의 위치 조정
+        movieElement.style.setProperty('--mouse-bottom', `${position}%`);
+
+        // 다음 애니메이션 프레임 요청
         requestAnimationFrame(animate); 
     }
     animate();
+
 
     // 포트폴리오 갤러리 코드
     const mainImage = document.querySelector(".portfolio_design img");

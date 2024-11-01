@@ -84,7 +84,8 @@ main #home{
     align-items: center;
 }
 main #home .mouse{
-    font-size: 2.5rem;
+    width: 100px;
+    height: 100px;
     position: absolute;
     top: 90%;
     left: 50%;
@@ -98,6 +99,18 @@ main #home .mouse{
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100%; height: 100vh;
     z-index: -1;
+}
+#home .movie::after{
+    content: '';
+    background: url(../img/icon-mouse.png)no-repeat center/cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: calc(var(--mouse-bottom, 5%));
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    transition: transform 0.1s ease; 
 }
 #home .movie video {
     width: 100%; 
@@ -196,6 +209,26 @@ main #about .name li{
     position: relative;
     display: flex; 
     align-items: center; 
+    padding-left: 40px;
+}
+main #about .name li::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 18px; 
+    height: 18px;
+}
+main #about .name-birth::before {
+    background: url(../img/icon-cake.png) no-repeat center/cover;
+}
+main #about .name-phone::before {
+    background: url(../img/icon-cell-phone.png) no-repeat center/cover;
+}
+main #about .name-email::before {
+    background: url(../img/icon-email.png) no-repeat center/cover;
+}
+main #about .name-mbti::before {
+    background: url(../img/icon-heart.png) no-repeat center/cover; 
 }
 main #about .name li> strong{
     display: inline;
