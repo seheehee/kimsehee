@@ -91,6 +91,7 @@ main #home .mouse{
     transform: translateX(-50%);
     cursor: pointer;
     color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 #home .movie {
     position: absolute;
@@ -174,7 +175,7 @@ main #home .mouse{
 }
 main #about{
     width: 60vw;
-    height: 130vh;
+    height: 100%;
     font-size: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 50px 0;
