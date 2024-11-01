@@ -135,7 +135,6 @@ main #home .mouse{
 }
 #home .intro {
     position: absolute;
-    bottom: 400px;
     width: 100%;
     line-height: 60px;
     text-align: center;
@@ -196,7 +195,7 @@ main #about{
 main #about .myprofile{
     display: flex;
     justify-content: space-between;
-    margin: 100px 200px;
+    margin: 50px 100px;
     align-items: center;
 }
 main #about .profile_photo{
