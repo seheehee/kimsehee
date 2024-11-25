@@ -107,5 +107,34 @@
         $(".cardRotate").addClass("backRotate").removeClass("cardRotate");
         $(this).addClass("cardRotate").removeClass("backRotate");
     });
+
+
+    // 모달 요소
+    const modal = document.getElementById("popupModal");
+    const modalImg = document.getElementById("popupImg");
+    const closeBtn = document.getElementsByClassName("close-btn")[0];
+
+    // 이미지 클릭 시 모달 열기
+    const images = document.querySelectorAll('.popup-trigger');
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block"; 
+            modalImg.src = this.src; 
+        });
+    });
+
+    // 닫기 버튼 클릭 시 모달 닫기
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    // 모달 외부 클릭 시 닫기
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none"; 
+        }
+    };
+
+    
 });
 

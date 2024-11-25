@@ -416,87 +416,70 @@ main #about .skill_list .card_contents strong{
     top: 50%;
     left: 130%;
 }
-#portfolio_D .moblie_text{
-    display: none;
+#portfolio_D > p {
+    background: #fff29d3d;
+    padding: 10px;
+    font-size: 20px;
 }
-.portfolio_content {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-}
-.portfolio_design {
-    position: relative;
-    width: 600px; 
-    height: auto; 
-    aspect-ratio: 3 / 4; 
-    margin-left:50px; 
-}
-
-.portfolio_design img {
-    width: 100%;
-    height: auto; 
-    object-fit: cover; 
-}
-.portfolio_design:after {
-    display: block;
-    content: '';
-    top:0; left: 0;
-    position: absolute;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-.design_contList {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 900px; 
-    background-color:  rgba(18, 185, 211, 0.13);
-    padding: 20px; 
-    margin: 0 auto; 
-    border-radius: 10px;
-}
-.design_thumbnails {
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem 0;
-    justify-items: center;
-}
-.design_thumbnails li {
-    position: relative;
+.slider-container {
+    width: 100%; 
+    height: 60vh;
     overflow: hidden;
-    width: 400px;
-    height: 500px; 
+    position: relative;
+    background: #fff29d3d;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
-.design_thumbnails img {
+.slides {
+    display: flex;
+    width: 100%;
+}
+.slide {
+    margin-right: 10px; 
+}
+.slide img {
     width: 100%; 
     height: 100%;
-    object-fit: cover; 
+    object-fit: contain;
+    cursor: pointer;
 }
-.design_thumbnails li::after {
-    content: attr(data-title);
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+    margin: 100px auto;
+}
+.close-btn {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    color: white; 
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 10px;
-    width: 300px;
-    height: 70px;
-    line-height: 70px;
-    text-align: center; 
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 25px;
+    top: 100px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
-
-.design_thumbnails li:hover::after {
-    opacity: 1; 
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 /* //section-portfolio_D */
 
